@@ -1,5 +1,6 @@
 package com.vertx.worker.data.access;
 
+
 import com.vertx.worker.data.entities.Customer;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

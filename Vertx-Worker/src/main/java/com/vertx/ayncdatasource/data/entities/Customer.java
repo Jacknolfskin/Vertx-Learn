@@ -1,4 +1,4 @@
-package com.spring.vertx.data.entities;
+package com.vertx.ayncdatasource.data.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

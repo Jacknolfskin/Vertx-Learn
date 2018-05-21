@@ -1,4 +1,4 @@
-package com.spring.vertx;
+package com.vertx.ayncdatasource;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -20,8 +20,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 /**
- * Entry point for the application via Spring Boot. Bootstraps the dependency injection framework and sets up the
- * injectable resources for database connectivity
+ * 异步连接数据库
  */
 @SpringBootApplication
 @EnableJpaRepositories
@@ -76,7 +75,7 @@ public class Application {
 
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("com.zanclus.data.entities");
+        factory.setPackagesToScan("com.vertx.ayncdatasource.entities");
         factory.setDataSource(dataSource());
         factory.afterPropertiesSet();
 

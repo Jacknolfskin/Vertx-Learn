@@ -1,6 +1,6 @@
-package com.spring.vertx.data.access;
+package com.vertx.ayncdatasource.data.access;
 
-import com.spring.vertx.data.entities.Customer;
+import com.vertx.ayncdatasource.data.entities.Customer;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

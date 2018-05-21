@@ -1,9 +1,9 @@
-package com.vertx.worker.verticles;
+package com.vertx.ayncdatasource.verticles;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.vertx.worker.Application;
-import com.vertx.worker.data.access.CustomerDAO;
-import com.vertx.worker.data.entities.Customer;
+import com.vertx.ayncdatasource.Application;
+import com.vertx.ayncdatasource.data.access.CustomerDAO;
+import com.vertx.ayncdatasource.data.entities.Customer;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.eventbus.DeliveryOptions;
 import io.vertx.core.eventbus.Message;
@@ -23,7 +23,9 @@ import java.io.IOException;
 @Slf4j
 public class CustomerWorker extends AbstractVerticle {
 
-    // Figure out why the Repository is not being injected.
+    /**
+     * Figure out why the Repository is not being injected.
+     */
     @Autowired
     private CustomerDAO dao;
 

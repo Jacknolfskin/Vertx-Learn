@@ -20,8 +20,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 /**
- * Entry point for the application via Spring Boot. Bootstraps the dependency injection framework and sets up the
- * injectable resources for database connectivity
+ * 普通Restful应用
  */
 @SpringBootApplication
 @EnableJpaRepositories

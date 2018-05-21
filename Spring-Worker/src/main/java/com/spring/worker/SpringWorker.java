@@ -35,7 +35,7 @@ import static org.springframework.beans.factory.config.ConfigurableBeanFactory.*
  * @author Thomas Segismont
  */
 @Component
-// Prototype scope is needed as multiple instances of this verticle will be deployed
+//Prototype scope is needed as multiple instances of this verticle will be deployed
 @Scope(SCOPE_PROTOTYPE)
 public class SpringWorker extends AbstractVerticle {
   private static final Logger LOG = LoggerFactory.getLogger(SpringWorker.class);
@@ -54,5 +54,4 @@ public class SpringWorker extends AbstractVerticle {
       }
     });
   }
-
 }
