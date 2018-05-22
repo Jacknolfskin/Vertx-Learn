@@ -19,7 +19,7 @@ import java.io.IOException;
  * A worker {@link io.vertx.core.Verticle} which gets injected with Spring DI when created.
  */
 @Component
-@SpringVerticle(springConfig=Application.class)
+@SpringVerticle(springConfig = Application.class)
 @Slf4j
 public class CustomerWorker extends AbstractVerticle {
 
@@ -34,6 +34,7 @@ public class CustomerWorker extends AbstractVerticle {
 
     /**
      * Entry point for this {@link io.vertx.core.Verticle}
+     *
      * @throws Exception
      */
     @Override
@@ -44,6 +45,7 @@ public class CustomerWorker extends AbstractVerticle {
 
     /**
      * Handle database operations for a given message
+     *
      * @param msg The {@link Message} containing the information to tell which database operations to perform
      */
     public void handleDatabaseRequest(Message<Object> msg) {
@@ -64,9 +66,9 @@ public class CustomerWorker extends AbstractVerticle {
                     break;
                 case "addCustomer":
                     retVal = mapper.writeValueAsString(
-                                        dao.save(
-                                                mapper.readValue(
-                                                        ((JsonObject)msg.body()).encode(), Customer.class)));
+                            dao.save(
+                                    mapper.readValue(
+                                            ((JsonObject) msg.body()).encode(), Customer.class)));
                     msg.reply(retVal);
                     break;
                 default:

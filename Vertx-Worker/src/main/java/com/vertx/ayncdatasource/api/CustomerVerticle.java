@@ -12,7 +12,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.jacpfx.vertx.spring.SpringVerticle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import javax.annotation.PostConstruct;
 
 /**
@@ -34,7 +33,6 @@ public class CustomerVerticle {
     @PostConstruct
     public void start() throws Exception {
         log.info("Successfully create CustomerVerticle");
-
         // Deploy the CustomerWorker verticle and set it to have 4 instances
         DeploymentOptions deployOpts = new DeploymentOptions().setWorker(true).setMultiThreaded(true).setInstances(4);
         vertx.deployVerticle("java-spring:com.vertx.ayncdatasource.verticles.CustomerWorker", deployOpts, res -> {
@@ -73,7 +71,6 @@ public class CustomerVerticle {
 
     /**
      * Handle reply messages and convert them to {@link io.netty.handler.codec.http.HttpResponse} values.
-     *
      * @param reply The reply message
      * @param rc    The {@link RoutingContext}
      */
