@@ -1,4 +1,4 @@
-# 构建Vert.x异步编程
+# 构建Vert.x全异步编程
 
 ## 技术讨论 & [博客地址](https://www.jacknolfskin.top/)
 
